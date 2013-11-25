@@ -20,7 +20,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setup];
+        [self AMBlurViewSetup];
     }
     return self;
 }
@@ -28,21 +28,20 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
+        [self AMBlurViewSetup];
     }
     return self;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        [self setup];
+        [self AMBlurViewSetup];
     }
     return self;
 }
 
-- (void)setup {
+- (void)AMBlurViewSetup {
     // If we don't clip to bounds the toolbar draws a thin shadow on top
     [self setClipsToBounds:YES];
     
@@ -52,7 +51,7 @@
     }
 }
 
-- (void) setBlurTintColor:(UIColor *)blurTintColor {
+- (void)setBlurTintColor:(UIColor *)blurTintColor {
     [self.toolbar setBarTintColor:blurTintColor];
 }
 
